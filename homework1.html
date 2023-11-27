@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const UMM = "University of Medicine Mandalay";
+      const UDMM = "University of Dental Medicine Mandalay";
+      const UMT = "University of Medical Technology";
+      const MTU = "Mandalay Technological University";
+      const TUM = "Technological University Mandalay";
+      const UCSM = "University of Computer Studies Mandalay";
+      const YDNB = "Yadanapon University";
+
+      let mm = prompt("Enter Myanmar mark");
+      let eng = prompt("Enter English mark");
+      let maths = prompt("Enter Mathematics mark");
+      let chem = prompt("Enter Chemistry mark");
+      let phy = prompt("Enter Physics mark");
+      let bio = prompt("Enter Biology mark");
+
+      let totalMark = +mm + +eng + +maths + +chem + +phy + +bio;
+
+      if (
+        mm === "" ||
+        eng === "" ||
+        maths === "" ||
+        chem === "" ||
+        phy === "" ||
+        bio === ""
+      ) {
+        alert("Marks cannot be blank");
+      } else if (
+        mm === null ||
+        eng === null ||
+        maths === null ||
+        chem === null ||
+        phy === null ||
+        bio === null
+      ) {
+        alert("Marks cannot be null");
+      } else if (
+        Number(mm).toString() === "NaN" ||
+        Number(eng).toString() === "NaN" ||
+        Number(maths).toString() === "NaN" ||
+        Number(chem).toString() === "NaN" ||
+        Number(phy).toString() === "NaN" ||
+        Number(bio).toString() === "NaN"
+      ) {
+        alert(
+          "You can only type Numbers(0-9). Words and special characters *,*,% etc cannot be included"
+        );
+      } else if (
+        mm < 0 ||
+        mm > 100 ||
+        eng < 0 ||
+        eng > 100 ||
+        maths < 0 ||
+        maths > 100 ||
+        chem < 0 ||
+        chem > 100 ||
+        phy < 0 ||
+        phy > 100 ||
+        bio < 0 ||
+        bio > 100
+      ) {
+        alert("You can only type numbers between 0 and 100");
+      } else if (
+        mm < 40 ||
+        eng < 40 ||
+        maths < 40 ||
+        chem < 40 ||
+        phy < 40 ||
+        bio < 40
+      ) {
+        alert(
+          "You failed the Matriculation Examination. You are not eligible to apply to University"
+        );
+      } else {
+        if (totalMark > 500 && totalMark < 600) {
+          alert(
+            "You are eligible to apply to UMM, UDMM, UMT, MTU, TUM, UCSM, YDNB"
+          );
+        } else if (totalMark > 490 && totalMark < 500) {
+          alert("You are eligible to apply to UDMM, UMT, MTU, TUM, UCSM, YDNB");
+        } else if (totalMark > 480 && totalMark < 490) {
+          alert("You are eligible to apply to UMT, TUM, UCSM, YDNB");
+        } else if (totalMark > 460 && totalMark < 480) {
+          alert("You are eligible to apply to UMT,TUM, YDNB");
+        } else if (totalMark > 440 && totalMark < 460) {
+          alert("You are eligible to apply to TUM, YDNB");
+        } else {
+          alert("You are eligible to apply to YDNB");
+        }
+      }
+    </script>
+  </body>
+</html>
