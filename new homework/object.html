@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let student_info = {};
+
+      let count = prompt("How many students will enroll?");
+
+      for (let i = 0; i < count; i++) {
+        let name = prompt("Enter student name");
+
+        while (checkAlphabets(name)) {
+          name = prompt("Enter student name correctly");
+        }
+
+        function checkAlphabets(value) {
+          if (!/^[a-zA-Z\s]+$/.test(value) || value === null || value === "") {
+            return true;
+          }
+          return false;
+        }
+
+        let age = prompt("Enter student age");
+        while (checkAge(age)) {
+          age = prompt("Student Age must be between 15 and 30!");
+        }
+        function checkAge(value) {
+          if (
+            value < 15 ||
+            value > 30 ||
+            value === null ||
+            value === "" ||
+            isNaN(value)
+          ) {
+            return true;
+          }
+          return false;
+        }
+
+        let gender = prompt("Male or Female?").toUpperCase();
+
+        let username = prompt("Enter your username");
+        while (onlyLettersAndNumbers(username) || checkMaxLength(username)) {
+          username = prompt(
+            "Username must be only letters and numbers. Special characters are not allowed. Username must not be more than 15 characters."
+          );
+        }
+
+        function checkMaxLength(value) {
+          if (!(value.length < 15)) {
+            return true;
+          }
+          return false;
+        }
+
+        function onlyLettersAndNumbers(value) {
+          if (!/^[a-zA-Z0-9]+$/.test(value) || value === null || value === "") {
+            return true;
+          }
+          return false;
+        }
+
+        let password = prompt("Enter password");
+        while (checkPassword(password) || checkMaxLength(password)) {
+          password = prompt(
+            "Password cannot be blank. It must not be more than 15 characters. Add special characters to make your password stronger."
+          );
+        }
+
+        function checkPassword(value) {
+          if (value === null || value === "" || /\s/.test(value)) {
+            return true;
+          }
+          return false;
+        }
+
+        let studentDetails = {
+          name: name,
+          age: age,
+          gender: gender,
+          username: username,
+          password: password,
+        };
+
+        function studentId() {
+          let count = Object.keys(student_info).length;
+          return "Student_" + (count + 1);
+        }
+
+        student_info[studentId()] = studentDetails;
+      }
+
+      console.log(student_info);
+    </script>
+  </body>
+</html>
