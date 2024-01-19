@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #person_details {
+        border: 3px solid rgb(88, 218, 32);
+        margin: 40px;
+        padding: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="padding: 10px; margin: 10px">
+      <input
+        type="text"
+        id="name"
+        placeholder="name"
+        style="margin-right: 10px; margin-left: 20px"
+      />
+      <input
+        type="number"
+        id="age"
+        placeholder="age"
+        style="margin-right: 10px"
+      />
+      <input
+        type="text"
+        id="gender"
+        placeholder="gender"
+        style="margin-right: 10px"
+      />
+      <input
+        type="text"
+        id="job"
+        placeholder="job"
+        style="margin-right: 10px"
+      />
+
+      <input
+        type="text"
+        name="description"
+        id="description"
+        placeholder="write something"
+        style="margin-right: 10px"
+      />
+
+      <button id="info" onclick="save_info()" style="margin-right: 10px">
+        Save Info
+      </button>
+
+    </div>
+
+    <div style="padding: 10px; margin: 10px">
+      <input
+        type="text"
+        id="search_text"
+        placeholder="type to search"
+        style="margin-right: 10px; margin-left: 20px"
+      />
+      <button id="search" onclick="search_info()" style="margin-right: 10px">
+        Search
+      </button>
+    </div>
+
+    <div id="root">
+      <div id="person_details">
+      
+      </div>
+    </div>
+
+    <script src="testing.js"></script>
+  </body>
+</html>
