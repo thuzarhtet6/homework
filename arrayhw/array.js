@@ -18,6 +18,48 @@ const company_data = [
     contact: "Francisco Chang",
     country: "Mexico",
   },
+  {
+    id: 4,
+    name: "Ernst Handel",
+    contact: "Roland Mendel",
+    country: "Austria",
+  },
+  {
+    id: 5,
+    name: "Island Trading",
+    contact: "Helen Bennett",
+    country: "UK",
+  },
+  {
+    id: 6,
+    name: "Königlich Essen",
+    contact: "Philip Cramer",
+    country: "Germany",
+  },
+  {
+    id: 7,
+    name: "Laughing Bacchus Winecellars",
+    contact: "Yoshi Tannamuri",
+    country: "Canada",
+  },
+  {
+    id: 8,
+    name: "Magazzini Alimentari Riuniti",
+    contact: "Giovanni Rovelli",
+    country: "Italy",
+  },
+  {
+    id: 9,
+    name: "North/South",
+    contact: "Simon Crowther",
+    country: "UK",
+  },
+  {
+    id: 10,
+    name: "Paris spécialités",
+    contact: "Marie Bertrand",
+    country: "France",
+  },
 ];
 
 loadData(company_data);
