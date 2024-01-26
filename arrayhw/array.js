@@ -158,7 +158,7 @@ function updateRow() {
     updateCountryName !== ""
   ) {
     for (const company of company_data) {
-      if (company.id === updateId) {
+      if (company.id === +updateId) {
         company.name = updateCompanyName;
         company.contact = updateContactPerson;
         company.country = updateCountryName;
